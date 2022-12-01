@@ -5,11 +5,327 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>カメラ管理画面</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
 
+    <header class="navbar navbar-dark sticky-top bg-light flex-md-nowrap p-0 shadow">
+
+        <h1><img src="./img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
+
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+        </div>
+
+        <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="far fa-bell"></i>
+                <span class="badge bg-danger">4</span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">新機能リリース</a></li>
+                <li><a class="dropdown-item" href="#">メンテナンス情報</a></li>
+                <li><a class="dropdown-item" href="#">障害発生</a></li>
+            </ul>
+        </div>
+
+        <p class="user_name">桜井和寿</p>
+        <img src="./img/avatar-1.jpeg" alt="ユーザーアイコン">
+
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <ul class="sidebarList">
+                    <li class="sidebarList__item sidebarList__item--allItem">カメラ一覧</li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">BODYCAMERA0<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">2F<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">NHK<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">SASU<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">イサーン<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                </ul>
+
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <ul class="videoList">
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="videoList__item">
+                        <a href="">
+                            <div class="card" style="width: 18rem;">
+                                <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
+                                <div class="card-body">
+                                    <p class="card-title videoList__title">Card title</p>
+                                    <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
