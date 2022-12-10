@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kp">
 
 <head>
     <meta charset="UTF-8">
@@ -13,90 +13,194 @@
 
 <body>
 
-    <header class="navbar navbar-dark sticky-top bg-light flex-md-nowrap p-0 shadow">
+    <header class="navbar navbar-dark sticky-top flex-md-nowrap">
 
-        <h1><img src="./img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
+        <h1 class="navbar__logo"><img src="./img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
 
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+        <div class="modeSwitch form-check form-switch">
+            <label class="modeSwitch__label form-check-label" for="flexSwitchCheckDefault">ダークモード</label>
+            <input class="modeSwitch__btn form-check-input" type="checkbox" id="flexSwitchCheckDefault">
         </div>
 
         <div class="dropdown">
             <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="far fa-bell"></i>
-                <span class="badge bg-danger">4</span>
+                <i class="dropdown__icon far fa-bell"></i>
+                <span class="dropdown__badge badge bg-danger">99</span>
             </a>
 
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#">新機能リリース</a></li>
-                <li><a class="dropdown-item" href="#">メンテナンス情報</a></li>
-                <li><a class="dropdown-item" href="#">障害発生</a></li>
+            <ul class="newsList dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="newsList--info dropdown-item" href="#">新機能リリース</a></li>
+                <li><a class="newsList--mainte dropdown-item" href="#">メンテナンス情報</a></li>
+                <li><a class="newsList--trouble dropdown-item" href="#">障害発生</a></li>
             </ul>
         </div>
 
-        <p class="user_name">桜井和寿</p>
-        <img src="./img/avatar-1.jpeg" alt="ユーザーアイコン">
+        <div class="navbar__user">
+            <a href="#">
+                <p>桜井和寿</p>
+                <img src="./img/avatar-1.jpeg" alt="ユーザーアイコン">
+            </a>
+        </div>
 
     </header>
 
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
                 <ul class="sidebarList">
-                    <li class="sidebarList__item sidebarList__item--allItem">カメラ一覧</li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">BODYCAMERA0<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">2F<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    <li class="sidebarList__item sidebarList__item--allItem">
+                        <a href="">
+                            <img src="./img/icon_home.png" alt="">
+                            <span class="sidebarList__title">カメラ一覧</span>
+                        </a>
                     </li>
-                    <li class="sidebarList__item">NHK<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">君がいた夏</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+
                     </li>
-                    <li class="sidebarList__item">SASU<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">抱きしめたい</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
                     </li>
-                    <li class="sidebarList__item">イサーン<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">Replay</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
+                        </a>
                     </li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">CROSS ROAD</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">OFF</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">innocent world</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">Tomorrow never knows</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">everybody goes -秩序のない現代にドロップキック-</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">【es】~theme of es~</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">シーソーゲーム~勇敢な恋の歌~</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">名もなき詩</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">花-Memento-Mori-</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">マシンガンをぶっ放せ</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">Everything(It's you)</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">ニシヘヒガシヘ</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">終わりなき旅</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">I'LL BE</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">口笛</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">NOT FOUND</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
+                        </a>
+                    </li>
+                    <li class="sidebarList__item">
+                        <a href="">
+                            <img src="./img/icon_video.png" alt="">
+                            <span class="sidebarList__title">優しい歌</span>
+                            <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
+                        </a>
+
+                    </li>
                 </ul>
 
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <ul class="videoList">
+            <main class="contentWrapper col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <ul class="videoList row">
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">君がいた夏</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -105,10 +209,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">抱きしめたい</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -117,10 +221,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">Replay</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -129,10 +233,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">CROSS ROAD</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -140,11 +244,11 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
-                            <div class="card" style="width: 18rem;">
+                        <a class=" " href="">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper   ">
+                                    <p class="card-title videoList__title">innocent world</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -153,10 +257,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper   ">
+                                    <p class="card-title videoList__title">Tomorrow never knows</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -165,10 +269,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">everybody goes-秩序のない現代にドロップキック-</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -177,10 +281,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper   ">
+                                    <p class="card-title videoList__title">【es】~Theme of es~</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -189,10 +293,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper   ">
+                                    <p class="card-title videoList__title">シーソーゲーム~勇敢な恋の歌~</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -201,10 +305,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">名もなき詩</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -213,10 +317,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">花~Menento-Mori</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -225,10 +329,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">マシンガンをぶっ放せ</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -237,10 +341,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">Everything(It's you)</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -249,10 +353,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">ニシヘヒガシヘ</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -261,10 +365,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">終わりなき旅</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -273,10 +377,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">光の射す方へ</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -285,10 +389,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper   ">
+                                    <p class="card-title videoList__title">I'LL BE</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -296,11 +400,11 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
-                            <div class="card" style="width: 18rem;">
+                        <a class=" " href="">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">口笛</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>
@@ -309,10 +413,10 @@
 
                     <li class="videoList__item">
                         <a href="">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
-                                <div class="card-body">
-                                    <p class="card-title videoList__title">Card title</p>
+                                <div class="videoList__contentWrapper">
+                                    <p class="card-title videoList__title">NOT FOUND</p>
                                     <img class="videoList__watchIcon" src="./img/icon_eye.png" alt="">
                                 </div>
                             </div>

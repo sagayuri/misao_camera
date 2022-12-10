@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カメラ管理画面</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top flex-md-nowrap">
+
+        <h1 class="navbar__logo"><img src="../img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
+
+        <div class="modeSwitch form-check form-switch">
+            <label class="modeSwitch__label form-check-label" for="flexSwitchCheckDefault">ダークモード</label>
+            <input class="modeSwitch__btn form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+        </div>
+
+        <div class="dropdown">
+            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="dropdown__icon far fa-bell"></i>
+                <span class="dropdown__badge badge bg-danger">99</span>
+            </a>
+
+            <ul class="newsList dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="newsList--info dropdown-item" href="#">新機能リリース</a></li>
+                <li><a class="newsList--mainte dropdown-item" href="#">メンテナンス情報</a></li>
+                <li><a class="newsList--trouble dropdown-item" href="#">障害発生</a></li>
+            </ul>
+        </div>
+
+        <div class="navbar__user">
+            <a href="#">
+                <p>桜井和寿</p>
+                <img src="../img/avatar-1.jpeg" alt="ユーザーアイコン">
+            </a>
+        </div>
+
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <ul class="sidebarList">
+                    <li class="sidebarList__item sidebarList__item--allItem">カメラ一覧</li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">BODYCAMERA0<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">2F<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">NHK<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">SASU<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">イサーン<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    </li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                    <li class="sidebarList__item">AR71ROUTERO<span
+                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
+                </ul>
+
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+
+                <!-- レンジバー -->
+                <div class="container">
+
+                    <div class="range-slider">
+                        <span id="rs-bullet" class="rs-label">0</span>
+                        <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="200">
+
+                    </div>
+
+                    <div class="box-minmax">
+                        <span>0</span><span>200</span>
+                    </div>
+
+                </div>
+
+                <!-- ビデオ画面 -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bS2wqkwQuH8"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+                <!-- スクショアイコン -->
+                <img src="../img/btn_camera.png" alt="ビデオのスクリーンショットを撮影するボタン">
+
+                <!-- 再生モードアイコン -->
+                <img src="../img/btn_playMode.png" alt="再生モードの切り替えボタン">
+
+                <!-- 再生速度の切り替えボタン -->
+                <img src="../img/btn_playSpeed.png" alt="再生速度の切り替えボタン">
+
+                <!-- 表示日時 -->
+                <img src="../img/icon_calender.png" alt="カレンダーのアイコン">
+                <time>2022-12-03 9:00:12</time>
+
+                <!-- 一時停止 -->
+                <img src="../img/icon_stop.png" alt="一時停止">
+                <!-- 音量 -->
+                <img src="../img/icon_volume.png" alt="音量調節">
+                <!-- 拡大ボタン -->
+                <img src="../img/icon_zoom.png" alt="拡大ボタン">
+
+                <!-- シークバー -->
+                <img src="../img/seekbar.png" alt="シークバー">
+
+            </main>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

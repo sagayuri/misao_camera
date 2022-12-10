@@ -1,0 +1,20 @@
+$light_g_blue_header:linear-gradient(180deg, rgba(98,166,216,1) 0%, rgba(16,122,202,1) 100%);
+$light_g_blue_side:linear-gradient(0deg, rgba(98,166,216,1) 0%, rgba(16,122,202,1) 100%);
+$dark_g_blue_side:linear-gradient(180deg, rgba(15,130,212,1) 0%, rgba(28,44,77,1) 100%);
+$dark_g_blue_side:linear-gradient(0deg, rgba(15,130,212,1) 0%, rgba(28,44,77,1) 100%);
+$active: #29CA0F;
+$disable: #E0E0E0;
+$black: #333;
+$smoke: #fafafa;
+
+$space: 8;
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: $black;
+  background: $smoke;
+}
+
