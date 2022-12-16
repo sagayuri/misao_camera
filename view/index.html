@@ -15,7 +15,12 @@
 
     <header class="navbar navbar-dark sticky-top flex-md-nowrap">
 
-        <h1 class="navbar__logo"><img src="../img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
+        <div class="navbar--left">
+            <div id="burger-button" class="burgerIcon">
+                <span class="burgerIcon__inner"></span>
+            </div>
+            <h1 class="navbar__logo"><img src="../img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
+        </div>
 
         <div class="modeSwitch form-check form-switch">
             <label class="modeSwitch__label form-check-label" for="flexSwitchCheckDefault">ダークモード</label>
@@ -46,98 +51,95 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse is-show">
                 <ul class="sidebarList">
-                    <li class="sidebarList__item sidebarList__item--allItem">カメラ一覧</li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">BODYCAMERA0<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">2F<span class="badge bg-secondary sidebarList__badge--on">New</span>
+                    <li class="sidebarList__item sidebarList__item--allItem">
+                        <a href="../index.html">
+                            <img src="../img/icon_home.png" alt="">
+                            <span class="sidebarList__title">カメラ一覧</span>
+                        </a>
                     </li>
-                    <li class="sidebarList__item">NHK<span class="badge bg-secondary sidebarList__badge--on">New</span>
-                    </li>
-                    <li class="sidebarList__item">SASU<span class="badge bg-secondary sidebarList__badge--on">New</span>
-                    </li>
-                    <li class="sidebarList__item">イサーン<span class="badge bg-secondary sidebarList__badge--on">New</span>
-                    </li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--on">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                    <li class="sidebarList__item">AR71ROUTERO<span
-                            class="badge bg-secondary sidebarList__badge--off">New</span></li>
-                </ul>
 
+                    <li class="sidebarList__item sidebarList__item--allItem">
+                        <a href="">
+                            <img src="../img/icon-folder.png" alt="">
+                            <span class="sidebarList__title">キャプチャ一覧へ</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebarList__item sidebarList__item--allItem">
+                        <a href="">
+                            <img src="../img/icon-folder.png" alt="">
+                            <span class="sidebarList__title">キャプチャ一覧へ</span>
+                        </a>
+                    </li>
+                </ul>
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main id="contentWrapper" class="contentWrapper col-md-9 ms-sm-auto col-lg-10 px-md-4">
 
-                <!-- レンジバー -->
-                <div class="container">
+                <div class="videoWrapper col-md-8 col-lg-9">
 
-                    <div class="range-slider">
-                        <span id="rs-bullet" class="rs-label">0</span>
-                        <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="200">
-
+                    <div class="activeVideoWrapper">
+                        <img src="../img/icon-video-blue.png" alt="">
+                        <p class="activeVideoWrapper__title">終わりなき旅</p>
                     </div>
 
-                    <div class="box-minmax">
-                        <span>0</span><span>200</span>
+                    <div class="videoWrapper__inner">
+                        <!-- レンジバー -->
+                        <div class="rangeWrapper">
+                            <img class="rangeWrapper__icon rangeWrapper__icon--scaleUp" src="../img/icon_plus.png" alt="">
+                            <span id="rs-bullet" class="rangeWrapper__label">0</span>
+                            <input id="rs-range-line" class="rangeWrapper__range" type="range" value="0" min="0" max="100" orient="vertical">
+                            <img class="rangeWrapper__icon rangeWrapper__icon--scaleDown" src="../img/icon_minus.png" alt="">
+                        </div>
+                        <!-- ビデオ画面 -->
+                        <div class="videoContent">
+                                <iframe src="https://www.youtube.com/embed/bS2wqkwQuH8"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                                <button class="videoContent__shutter"><img  src="../img/btn_camera.png" alt="ビデオのスクリーンショットを撮影するボタン"></button>
+                        </div>
+                    </div>
+                    <div class="playModeWrapper">
+                        <div class="playModeWrapper__inner">
+                            <button id="displayMode" class="modeWrapper" href="">
+                                通常
+                            </button>
+                            <button class="speedWrapper">
+                                <span class="speedWrapper__content">1<span>x</span></span>
+                            </button>
+                        </div>
+                        <div class="playModeWrapper__inner">
+                            <!-- 表示日時 -->
+                            <img class="iconCalender" src="../img/icon_calender.png" alt="カレンダーのアイコン">
+                            <time>2022-12-03 9:00:12</time>
+                        </div>
+                        <div class="playModeWrapper__inner iconWrapper">
+                            <!-- 一時停止 -->
+                            <button><img src="../img/icon_stop.png" alt="一時停止"></button>
+                            <!-- 音量 -->
+                            <button><img src="../img/icon_volume.png" alt="音量調節"></button>
+                            <!-- 拡大ボタン -->
+                            <button><img src="../img/icon_zoom.png" alt="拡大ボタン"></button>
+                        </div>
                     </div>
 
                 </div>
 
-                <!-- ビデオ画面 -->
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/bS2wqkwQuH8"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-
-                <!-- スクショアイコン -->
-                <img src="../img/btn_camera.png" alt="ビデオのスクリーンショットを撮影するボタン">
-
-                <!-- 再生モードアイコン -->
-                <img src="../img/btn_playMode.png" alt="再生モードの切り替えボタン">
-
-                <!-- 再生速度の切り替えボタン -->
-                <img src="../img/btn_playSpeed.png" alt="再生速度の切り替えボタン">
-
-                <!-- 表示日時 -->
-                <img src="../img/icon_calender.png" alt="カレンダーのアイコン">
-                <time>2022-12-03 9:00:12</time>
-
-                <!-- 一時停止 -->
-                <img src="../img/icon_stop.png" alt="一時停止">
-                <!-- 音量 -->
-                <img src="../img/icon_volume.png" alt="音量調節">
-                <!-- 拡大ボタン -->
-                <img src="../img/icon_zoom.png" alt="拡大ボタン">
-
                 <!-- シークバー -->
-                <img src="../img/seekbar.png" alt="シークバー">
+                <div class="seekBar"><img src="../img/seekbar.png" alt="シークバー"></div>
+                <div class="seekBarWrapper">
+                        <div class="skipWrapper">
+                            <button class="skipWrapper__btn skipWrapper__btn--backMin"><span>5M</span></button>
+                            <button class="skipWrapper__btn skipWrapper__btn--backSec"><span>5S</span></button>
+                            <button class="skipWrapper__btn skipWrapper__btn--live"><span>live</span></button>
+                            <button class="skipWrapper__btn skipWrapper__btn--onSec"><span>5S</span></button>
+                            <button class="skipWrapper__btn skipWrapper__btn--onMin"><span>5M</span></button>
+                        </div>
+                        <button id="displayScale" class="changeHour">日</button>
+                </div>
 
             </main>
         </div>
@@ -145,6 +147,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/custom.js"></script>
 </body>
 
 </html>

@@ -14,19 +14,28 @@ img {
     vertical-align: baseline;
 }
 
+button {
+    border: none;
+    background: transparent;
+}
+
 .navbar {
     width: 100%;
-    padding: 12px #{v.$space * 7}px;
+    padding: 12px #{v.$space * 7}px 12px 20px;
     position: fixed;
     top: 0;
     background: v.$light_g_blue_header;
     border-bottom: 1px solid #107ACA;
     justify-content: flex-end;
     gap: #{v.$space * 2}px;
-    &__logo {
-        width: 8%;
-        max-width: 120px;
+
+    &--left {
         margin-right: auto;
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+        width: 120px;
     }
     &__user {
 
@@ -50,6 +59,67 @@ img {
             height: 32px;
             border-radius: 16px;
             display: inline-block;
+        }
+    }
+}
+
+.burgerIcon {
+   position: relative;
+   width: 50px;
+   height: 50px;
+   margin-right: #{v.$space * 5}px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px;
+   color: #fff;
+
+   &__inner {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #fff;
+    position: absolute;
+    pointer-events: none;
+
+    &::before {
+        content: "";
+        width: 25px;
+        height: 3px;
+        border-radius: 3px;
+        position: absolute;
+        bottom: 9px;
+        background: #fff;
+    }
+
+    &::after {
+        content: "";
+        width: 25px;
+        height: 3px;
+        border-radius: 3px;
+        position: absolute;
+        top: 9px;
+        background: #fff;
+    }
+   }
+}
+
+.deleteClass {
+    background: transparent;
+    transition: 1s ease-in-out;
+
+    span {
+        height: 0;
+        &::before {
+            bottom: -2px;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            top: -1px;
+            transform: rotate(-45deg);
         }
     }
 }
@@ -162,8 +232,14 @@ img {
     padding: 0;
     background: v.$light_g_blue_side;
     position: fixed;
-    left: 0;
+    left: -100%;
     overflow: scroll;
+    transition: all 200ms ease-in-out;
+}
+
+.sidebar.is-show {
+    left: 0;
+    transition: all 200ms ease-in-out;
 }
 
 .sidebarList {
@@ -216,7 +292,10 @@ img {
 }
 
 .contentWrapper {
+    height: 100vh;
     padding-top: 77px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
 }
 
 .videoList {
@@ -263,4 +342,318 @@ img {
 .card {
     height: 100%;
     border: none;
+}
+
+.activeVideoWrapper {
+    margin-bottom: #{v.$space * 2}px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: #{v.$space * 1}px;
+
+    img {
+        width: 20px;
+        height: 15px;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        font-size: 14px;
+        color: v.$light-blue;
+    }
+}
+
+.videoWrapper {
+    padding-top: 46px;
+    margin: 0 auto;
+    position: relative;
+
+    &__inner {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+}
+
+.videoContent {
+    padding-top: 56.25%;
+    width: 100%;
+    position: relative;
+
+    iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    }
+
+    &__shutter {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: 50%;
+        bottom: 2%;
+        transform: translateX(-50%);
+    }
+}
+
+// レンジバーのスタイル
+input[type="range"] {
+    appearance: slider-vertical;
+    background-color: v.$light-blue;
+
+    &:focus,
+  &:active {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid rgba(98, 166, 216, .3);
+    width: 22px;
+    height: 22px;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+  }
+
+  &:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 4px rgba(98,166,216, .4);
+    transition: .4s;
+  }
+  }
+
+  .rangeWrapper {
+    width: 50px;
+    position: relative;
+
+    &__icon {
+        width: 20px;
+        height: auto;
+        position: relative;
+        left: -10px;
+
+
+        &--scaleUp {
+            margin-bottom: #{v.$space * 2}px;
+        }
+
+        &--scaleDown {
+            margin-top: #{v.$space * 2}px;
+        }
+    }
+
+    &__range {
+        width: 2px;
+        height: 88%;
+    }
+
+    &__label {
+        position: absolute;
+        left: -100%;
+        bottom: 3%;
+        transform-origin: center center;
+        display: block;
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        border-radius: 50%;
+        line-height: 30px;
+        text-align: center;
+        font-weight: bold;
+        padding-top: #{v.$space * 2}px;
+        box-sizing: border-box;
+        border: 2px solid v.$light-blue;
+        margin-top: 20px;
+        margin-left: -38px;
+        left: attr(value);
+        color: v.$light-blue;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 20px;
+        &::after {
+            content: "%";
+            display: block;
+            font-size: 10px;
+            letter-spacing: 0.07em;
+            margin-top: -2px;
+        }
+    }
+  }
+
+.playModeWrapper {
+    padding: 0 20px;
+    margin: #{v.$space * 2}px auto 46px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: #{v.$space * 1}px;
+    }
+}
+
+.modeWrapper {
+    @include m.light-b-btn;
+    padding: 4px 12px 2px #{v.$space * 4}px;
+    display: inline-block;
+    background-image: url(../img/btn_playMode.png);
+    background-position: center left 14px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+
+&:hover {
+opacity: 0.8;
+color: #fff;
+}
+}
+
+.speedWrapper {
+    @include m.light-b-btn;
+
+    &:hover {
+        opacity: 0.8;
+        color: #fff;
+        }
+
+    &__content {
+        padding: 4px 24px 0 #{v.$space * 3}px;
+        display: inline-block;
+
+        span {
+            font-size: 10px;
+        }
+    }
+}
+
+.iconWrapper {
+    img {
+        width: #{v.$space * 3}px;
+        height: auto;
+    }
+}
+
+.iconCalender {
+    width: 20px;
+    height: 20px;
+}
+
+.seekBar {
+    max-width: 1195px;
+    margin: 0 auto #{v.$space * 1}px;
+}
+
+.seekBarWrapper {
+    max-width: 1195px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+}
+
+.skipWrapper {
+
+    &__btn {
+        @include m.light-border-btn;
+        margin-right: #{v.$space * 1}px;
+        display: inline-block;
+
+        &:hover {
+            opacity: 0.8;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        span {
+            display: inline-block;
+            color: v.$light-blue
+        }
+
+        &--backMin {
+            background-image: url(../img/icon_back_minutes.png);
+            background-position: center left 12px;
+            background-size: 14px 9px;
+            background-repeat: no-repeat;
+
+            span {
+                padding: 4px 12px 2px #{v.$space * 4}px;
+            }
+        }
+
+        &--backSec {
+            background-image: url(../img/icon_back_seconds.png);
+            background-position: center left 12px;
+            background-size: 5px 9px;
+            background-repeat: no-repeat;
+
+            span {
+                padding: 4px 12px 2px #{v.$space * 2}px;
+            }
+        }
+
+        &--onMin {
+            background-image: url(../img/icon_moveOn_minutes.png);
+            background-position: center right 12px;
+            background-size: 14px 9px;
+            background-repeat: no-repeat;
+
+            span {
+                padding: 4px #{v.$space * 4}px 2px 12px;
+            }
+        }
+
+        &--onSec {
+            background-image: url(../img/icon_moveOn_seconds.png);
+            background-position: center right 12px;
+            background-size: 5px 9px;
+            background-repeat: no-repeat;
+
+            span {
+                padding: 4px #{v.$space * 2}px 2px 12px;
+            }
+        }
+
+        &--live {
+            @include m.light-b-btn;
+            background-image: url(../img/btn_live.png);
+            background-position: center left 12px;
+            background-size: 15px 15px;
+            background-repeat: no-repeat;
+
+            span {
+                padding: 4px 12px 2px #{v.$space * 4}px;
+                color: #fff
+            }
+        }
+    }
+}
+
+.changeHour {
+    @include m.light-b-btn;
+    padding: 4px 12px 2px #{v.$space * 4}px;
+    margin-left: 30%;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    background-image: url(../img/btn_scale.png);
+    background-position: center left 12px;
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+
+    &:hover {
+        opacity: 0.8;
+    }
 }

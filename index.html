@@ -15,7 +15,12 @@
 
     <header class="navbar navbar-dark sticky-top flex-md-nowrap">
 
-        <h1 class="navbar__logo"><img src="./img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
+        <div class="navbar--left">
+            <div id="burger-button" class="burgerIcon">
+                <span class="burgerIcon__inner"></span>
+            </div>
+            <h1 class="navbar__logo"><img src="./img/logo_white.png" alt="有限会社ミサオネットワーク"></h1>
+        </div>
 
         <div class="modeSwitch form-check form-switch">
             <label class="modeSwitch__label form-check-label" for="flexSwitchCheckDefault">ダークモード</label>
@@ -46,7 +51,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse is-show">
                 <ul class="sidebarList">
                     <li class="sidebarList__item sidebarList__item--allItem">
                         <a href="">
@@ -193,7 +198,7 @@
 
             </nav>
 
-            <main class="contentWrapper col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main id="contentWrapper" class="contentWrapper col-md-9 ms-sm-auto col-lg-10 px-md-4">
                 <ul class="videoList row">
                     <li class="videoList__item">
                         <a href="">
@@ -430,6 +435,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/custom.js"></script>
 </body>
 
 </html>
