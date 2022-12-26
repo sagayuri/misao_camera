@@ -560,6 +560,7 @@ input[type="range"] {
     &__range {
         width: 2px;
         height: 88%;
+        accent-color: #62A6D8;
 
         @include m.mq(sp) {
             height: 75%;
@@ -1025,5 +1026,9 @@ color: #fff;
     &:hover {
     opacity: 0.8;
     }
+    }
+
+    .rangeWrapper__range {
+    accent-color: #fff;
     }
 }

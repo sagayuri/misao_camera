@@ -598,6 +598,7 @@ input[type=range]:active::-webkit-slider-thumb {
 .rangeWrapper__range {
   width: 2px;
   height: 88%;
+  accent-color: #62A6D8;
 }
 @media screen and (max-width: 767px) {
   .rangeWrapper__range {
@@ -1088,4 +1089,7 @@ input[type=range]:active::-webkit-slider-thumb {
 }
 .darkTheme .modeWrapper:hover {
   opacity: 0.8;
+}
+.darkTheme .rangeWrapper__range {
+  accent-color: #fff;
 }
