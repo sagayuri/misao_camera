@@ -13,7 +13,7 @@
 
 <body>
 
-    <header class="navbar navbar-dark sticky-top flex-md-nowrap">
+    <header class="navbar sticky-top flex-md-nowrap">
 
         <div class="navbar--left">
             <div id="burger-button" class="burgerIcon">
@@ -24,7 +24,7 @@
 
         <div class="modeSwitch form-check form-switch">
             <label class="modeSwitch__label form-check-label" for="flexSwitchCheckDefault">ダークモード</label>
-            <input class="modeSwitch__btn form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <input id="js-mode-btn" class="modeSwitch__btn form-check-input" type="checkbox" id="flexSwitchCheckDefault">
         </div>
 
         <div class="dropdown">
@@ -42,7 +42,7 @@
 
         <div class="navbar__user">
             <a href="#">
-                <p>桜井和寿</p>
+                <p class="pcOnly">桜井和寿</p>
                 <img src="./img/avatar-1.jpeg" alt="ユーザーアイコン">
             </a>
         </div>
@@ -51,16 +51,16 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse is-show">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 sidebar">
                 <ul class="sidebarList">
                     <li class="sidebarList__item sidebarList__item--allItem">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_home.png" alt="">
                             <span class="sidebarList__title">カメラ一覧</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">君がいた夏</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
@@ -68,126 +68,126 @@
 
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">抱きしめたい</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">Replay</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">CROSS ROAD</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">OFF</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">innocent world</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">Tomorrow never knows</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">everybody goes -秩序のない現代にドロップキック-</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">【es】~theme of es~</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">シーソーゲーム~勇敢な恋の歌~</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">名もなき詩</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">花-Memento-Mori-</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">マシンガンをぶっ放せ</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">Everything(It's you)</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">ニシヘヒガシヘ</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">終わりなき旅</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">I'LL BE</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--on">ON</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">口笛</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">NOT FOUND</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
                         </a>
                     </li>
                     <li class="sidebarList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <img src="./img/icon_video.png" alt="">
                             <span class="sidebarList__title">優しい歌</span>
                             <span class="badge bg-secondary sidebarList__badge sidebarList__badge--off">OFF</span>
@@ -198,10 +198,10 @@
 
             </nav>
 
-            <main id="contentWrapper" class="contentWrapper col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <main id="contentWrapper" class="contentWrapper container-fluid col-md-9 ms-sm-auto col-lg-9 px-md-4">
                 <ul class="videoList row">
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -213,7 +213,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -225,7 +225,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -237,7 +237,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -249,7 +249,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a class=" " href="">
+                        <a href="">
                             <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper   ">
@@ -261,7 +261,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper   ">
@@ -273,7 +273,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -285,7 +285,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
                                 <div class="videoList__contentWrapper   ">
@@ -297,7 +297,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper   ">
@@ -309,7 +309,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -321,7 +321,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -333,7 +333,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -345,7 +345,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -357,7 +357,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -369,7 +369,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -381,7 +381,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_offline.png" class="card-img-top" alt="オフラインのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -393,7 +393,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_001.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper   ">
@@ -405,7 +405,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a class=" " href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_002.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">
@@ -417,7 +417,7 @@
                     </li>
 
                     <li class="videoList__item">
-                        <a href="">
+                        <a href="./view/index.html">
                             <div class="card">
                                 <img src="./img/video_thumbnail_003.png" class="card-img-top" alt="ビデオのサムネイル">
                                 <div class="videoList__contentWrapper">

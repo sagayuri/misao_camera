@@ -3,8 +3,7 @@
 $breakpoint: (
   sp: "screen and (max-width: 767px)",
   tab: "screen and (min-width: 768px)",
-  pc: "screen and (max-width: 1025px)",
-  vertical: "screen and (max-width: 1200px)",
+  pc: "screen and (min-width: 1025px)",
 );
 
 @mixin mq($bp) {
@@ -32,5 +31,26 @@ $breakpoint: (
   font-size: 12px;
   color: #fff;
 }
+
+@mixin dark-b-btn {
+  border: none;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 2px 2px 4px rgba(255,255,255,0.25);
+  font-weight: bold;
+  font-size: 12px;
+  color: #1C2C4D;
+}
+
+@mixin dark-border-btn {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: transparent;
+  box-shadow: 2px 2px 4px rgba(255,255,255,0.25);
+  font-weight: bold;
+  font-size: 12px;
+  color: #fff;
+}
+
 
 
